@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PROTOGONOS — Ткань Бытия / Протокол L-01</title>
+<meta name="description" content="PROTOGONOS — техно-мистический трактат о пустоте, вихрях и коде развертки пространства.">
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- фоновая топографическая сетка (canvas) -->
+<canvas id="topo" aria-hidden="true"></canvas>
+
+<!-- ══════════════════ ШАПКА ══════════════════ -->
+<header class="hdr">
+  <a class="logo" href="#genesis" data-nav="genesis">
+    <span class="logo-mark"></span>PROTOGONOS
+  </a>
+  <nav class="nav">
+    <button class="navbtn" data-nav="manifest"><i>01</i>MANIFEST</button>
+    <button class="navbtn" data-nav="chronicle"><i>02</i>CHRONICLE</button>
+    <button class="navbtn" data-nav="transmission"><i>03</i>TRANSMISSION</button>
+  </nav>
+  <div class="hdr-right">
+    <span class="clock" id="clock">--:--:--</span>
+    <span class="hdr-tag">L-01</span>
+  </div>
+</header>
+
+<!-- ══════════════════ HERO ══════════════════ -->
+<section class="hero" id="genesis">
+  <div class="hero-meta"><span>PROTOGONOS</span><span>ORBITAL MECHANISM</span><span>PLATE&nbsp;L-01</span><span>2026</span></div>
+
+  <div class="hero-mech">
+    <img id="mech" src="assets/img/mechanism-line.png" alt="Lunar Orbital Mechanism — чертеж механизма вокруг Луны">
+    <span class="cross c1">+</span><span class="cross c2">+</span><span class="cross c3">+</span><span class="cross c4">+</span>
+    <span class="mech-note n1">ORBITA&nbsp;I · R&nbsp;=&nbsp;2.7·10⁶&nbsp;m</span>
+    <span class="mech-note n2">SPIN&nbsp;1/2 · TOROIDAL&nbsp;NODE</span>
+    <span class="mech-note n3">V&nbsp;→&nbsp;∂(Tкань&nbsp;Бытия)/∂t</span>
+  </div>
+
+  <h1 class="hero-title">PROTOGONOS</h1>
+  <p class="hero-sub">ПЕРВОРОДНЫЙ ВИХРЬ · ТКАНЬ БЫТИЯ · ПРОТОКОЛ&nbsp;L-01</p>
+
+  <div class="hero-scroll"><span>SCROLL</span><em></em></div>
+</section>
+
+<!-- строка констант -->
+<div class="stats">
+  <div class="stat rv"><b>0</b><span>ПУСТОТА · SINGULARITY&nbsp;RADIUS</span></div>
+  <div class="stat rv"><b>1/2</b><span>КВАНТ СПИНА · INERTIA&nbsp;OF&nbsp;VORTEX</span></div>
+  <div class="stat rv"><b>720°</b><span>ПОВОРОТ ТКАНИ · PAULI&nbsp;SHIFT</span></div>
+  <div class="stat rv"><b>2·n²</b><span>ЕКТАСТЬ РАЗВЕРТКИ · MATRIX&nbsp;CAPACITY</span></div>
+</div>
+
+<!-- ══════════════════ 01 · MANIFEST ══════════════════ -->
+<section class="sec" id="manifest">
+  <div class="meta-row rv"><span>M-01 / MANIFEST</span><span>ГИПЕРЛОГИКА</span><span>1/2</span><span>◈</span></div>
+
+  <div class="art">
+    <div class="art-head rv">
+      <div class="art-no">01</div>
+      <div>
+        <div class="kicker" data-edit="manifest.kicker"></div>
+        <h2 class="art-title" data-edit="manifest.title"></h2>
+        <p class="art-sub" data-edit="manifest.sub"></p>
+      </div>
+    </div>
+    <div class="art-body" id="manifest-body"></div>
+  </div>
+</section>
+
+<!-- ══════════════════ 02 · CHRONICLE ══════════════════ -->
+<section class="sec sec-moon" id="chronicle">
+  <img class="moon" src="assets/img/moon.png" alt="" aria-hidden="true">
+  <div class="meta-row rv"><span>C-02 / CHRONICLE</span><span>МАТРИЦА</span><span>8</span><span>◈</span></div>
+
+  <div class="art">
+    <div class="art-head rv">
+      <div class="art-no">02</div>
+      <div>
+        <div class="kicker" data-edit="chronicle.kicker"></div>
+        <h2 class="art-title" data-edit="chronicle.title"></h2>
+        <p class="art-sub" data-edit="chronicle.sub"></p>
+      </div>
+    </div>
+    <div class="art-body" id="chronicle-body">
+      <figure class="plate rv">
+        <img src="assets/img/mechanism-plate.jpg" alt="Архивная чертёжная плита L-01">
+        <figcaption>PLATE&nbsp;L-01 · АРХИВ ОРБИТАЛЬНОЙ СТАНЦИИ · LUNAR&nbsp;ORBITAL&nbsp;MECHANISM</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ 03 · TRANSMISSION ══════════════════ -->
+<section class="sec sec-vid" id="transmission">
+  <div class="meta-row rv"><span>T-03 / TRANSMISSION</span><span>СИГНАЛ</span><span>AUDIO</span><span>◈</span></div>
+
+  <div class="vid-head rv">
+    <h2 class="art-title">TRANSMISSION</h2>
+    <p class="art-sub">ЖИВОЙ СИГНАЛ С ОРБИТАЛЬНОЙ СТАНЦИИ L-01 · ИЗОБРАЖЕНИЕ + ЗВУКОВОЙ КАНАЛ</p>
+  </div>
+
+  <div class="player rv" id="player">
+    <span class="cross p1">+</span><span class="cross p2">+</span>
+    <div class="player-stage">
+      <video id="vid" src="media/transmission.mp4" playsinline preload="metadata"></video>
+      <button class="bigplay" id="bigplay" aria-label="Воспроизвести"><i></i></button>
+      <div class="rec">●&nbsp;REC</div>
+    </div>
+    <div class="player-bar">
+      <button class="pbtn" id="pplay" aria-label="Пуск/Пауза"><i></i></button>
+      <span class="tcode" id="tcode">00:00 / --:--</span>
+      <div class="track" id="track"><div class="track-fill" id="trackfill"></div><div class="track-thumb" id="trackthumb"></div></div>
+      <button class="pbtn mute" id="mute" aria-label="Звук"><i></i></button>
+      <div class="vol" id="vol"><div class="vol-fill" id="volfill"></div></div>
+      <span class="tcode sig">SIG-LOCK&nbsp;L-01</span>
+    </div>
+    <canvas id="viz" aria-hidden="true"></canvas>
+  </div>
+
+  <div class="vid-note rv"><span>КАНАЛ 01 · 48&nbsp;ПОЛОС АНАЛИЗА · ЗАПУСК: КНОПКА ▶ · ЗВУК: ВКЛЮЧЕН</span><span>REDACTED&nbsp;//&nbsp;OPEN&nbsp;FREQUENCY</span></div>
+</section>
+
+<!-- ══════════════════ ПОДВАЛ ══════════════════ -->
+<footer class="ftr">
+  <div class="ftr-line"></div>
+  <div class="ftr-in">
+    <span>© 2026 PROTOGONOS · ТКАНЬ БЫТИЯ</span>
+    <span class="edit-hint" id="edithint">РЕДАКТОР ТЕКСТОВ — Ctrl+E</span>
+    <a class="gh" href="#" id="ghlink" rel="noopener">SOURCE / GITHUB</a>
+    <span>L-01</span>
+  </div>
+</footer>
+
+<!-- ══════════════════ ПАНЕЛЬ РЕДАКТОРА ══════════════════ -->
+<div class="ed-bar" id="edbar">
+  <span class="ed-title">◈ РЕЖИМ РЕДАКТИРОВАНИЯ</span>
+  <span class="ed-how">Кликай по любому тексту на странице и правь. Готово — «Опубликовать».</span>
+  <div class="ed-actions">
+    <button class="ebtn main" id="edpublish">ОПУБЛИКОВАТЬ</button>
+    <button class="ebtn" id="edreset">СБРОСИТЬ ЧЕРНОВИК</button>
+    <button class="ebtn" id="edexit">ВЫЙТИ</button>
+  </div>
+</div>
+<div class="draft-bar" id="draftbar">
+  ◈ НА ЭКРАНЕ ВАШ ЛОКАЛЬНЫЙ ЧЕРНОВИК — ОПУБЛИКУЙТЕ ЕГО НА GITHUB, ЧТОБЫ ОБНОВИТЬ САЙТ
+  <button class="ebtn" id="draftok">ПОНЯТНО</button>
+</div>
+
+<!-- модалка публикации -->
+<div class="modal" id="modal">
+  <div class="modal-panel">
+    <div class="modal-title">ПУБЛИКАЦИЯ НА GITHUB</div>
+    <ol class="modal-steps">
+      <li>Нажмите <b>«СКАЧАТЬ texts.js»</b> — браузер сохранит обновлённый файл текстов.</li>
+      <li>Откройте ваш репозиторий на GitHub → папка <b>content</b>.</li>
+      <li>Перетащите скачанный <b>texts.js</b> в список файлов и подтвердите <b>Commit</b> (заменит старый файл).</li>
+      <li>Через 1–2 минуты обновите сайт — тексты обновятся для всех.</li>
+    </ol>
+    <div class="modal-actions">
+      <button class="ebtn main" id="mdownload">СКАЧАТЬ texts.js</button>
+      <button class="ebtn" id="mclose">ЗАКРЫТЬ</button>
+    </div>
+  </div>
+</div>
+
+<script src="content/texts.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
